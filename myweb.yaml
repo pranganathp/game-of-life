@@ -6,8 +6,9 @@ metadata:
      app: mygol
   name: mygol
 spec:
-  replicas:1
+  replicas: 1
   selector:
+    matchLabels:
     app: myapp
   template:
     metadata:
