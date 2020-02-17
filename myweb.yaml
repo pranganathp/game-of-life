@@ -9,11 +9,11 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-    app: myapp
+    app: mygol
   template:
     metadata:
       labels:
-        app: myweb
+        app: mygol
     spec:
       containers:
       - image: dockerranganath/gol_deploy:0217_4
