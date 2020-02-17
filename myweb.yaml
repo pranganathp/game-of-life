@@ -3,19 +3,18 @@ kind: Deployment
 metadata:
   labels:
      app: myweb
-     name: myweb
+    name: myweb
 spec:
   containers:
     - image: dockerranganath/gol_deploy:0217_4
        name: gol
-
 
 apiVersion: v2
 kind:Service
 metadata:
   labels:
      app: myweb
-     name: myweb
+    name: myweb
 spec:
   ports:
     - nodeport: 32223
