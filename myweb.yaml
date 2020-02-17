@@ -8,7 +8,7 @@ metadata:
 spec:
   containers:
     - image: dockerranganath/gol_deploy:0217_4
-       name: mygol
+      name: mygol
 
 ---
 apiVersion: v2
