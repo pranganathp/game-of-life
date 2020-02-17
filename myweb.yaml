@@ -1,3 +1,4 @@
+---
 apiVersion: v1
 kind: Deployment
 metadata:
@@ -9,6 +10,7 @@ spec:
     - image: dockerranganath/gol_deploy:0217_4
        name: gol
 
+---
 apiVersion: v2
 kind:Service
 metadata:
