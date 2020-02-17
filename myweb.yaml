@@ -6,9 +6,17 @@ metadata:
      app: mygol
   name: mygol
 spec:
-  containers:
-    - image: dockerranganath/gol_deploy:0217_4
-      name: mygol
+  replicas:1
+  selector:
+    app: myapp
+  template:
+    metadata:
+      labels:
+        app: myweb
+    spec:
+      containers:
+      - image: dockerranganath/gol_deploy:0217_4
+        name: mygol
 
 ---
 apiVersion: v2
