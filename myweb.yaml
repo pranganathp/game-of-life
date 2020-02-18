@@ -1,37 +1,19 @@
----
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  labels:
-     app: mygol
-  name: mygol
+  name: gol
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: mygol
+      app: gol
   template:
     metadata:
       labels:
-        app: mygol
+        app: gol
     spec:
       containers:
-      - image: dockerranganath/gol_deploy:0217_4
-        name: mygol
-
----
-apiVersion: v2
-kind: Service
-metadata:
-  labels:
-     app: mygol
-  name: mygol
-spec:
-  ports:
-    - nodeport: 32223
-      port: 8080
-      protocol: TCP
-      targetport: 8080
-  selector: 
-    app: mygol
-    type: NodePort
+      - name: gol
+        image: dockerranganath/demo_repo:0218
+        ports:
+        - containerPort: 80
